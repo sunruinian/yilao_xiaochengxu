@@ -1,0 +1,186 @@
+<view class='view-container overline'>
+  <block wx:for='{{articles}}' wx:key='{{item.id}}'>  
+    <view class='articles-container'>
+      <view class='info bottom' wx:if="{{item.thumbArr.length < 1}}">
+        <navigator url="../Thearticle/Thearticle?id={{item.id}}" open-type="navigate">  
+          <view class='info text'>{{item.title}}</view>
+          <view class='times'>
+            <view>{{item.uperName}}</view>
+            <view>{{item.pubTime}}</view>
+          </view>
+        </navigator>  
+      </view> 
+      <view class='info bottom guanggao1' wx:if="{{item == ''}}">
+        <ad unit-id="adunit-5fcd41189b25bde4"></ad>
+      </view>
+      <view class='info bottom' wx:if="{{item.thumbArr.length < 2 && item.thumbArr.length > 0}}">
+        <navigator url="../Thearticle/Thearticle?id={{item.id}}" open-type="navigate">  
+          <view class='created-at'>
+            <view class='Hightotal'>{{item.title}}</view>
+            <view class='timess'>
+              <view>{{item.uperName}}</view>
+              <view class='right'>{{item.pubTime}}</view>
+            </view>
+          </view> 
+          <view wx:for='{{item.thumbArr}}' wx:for-item="cell" wx:for-index="cellindex" wx:key='{{item.id}}'> 
+            <image class='avatar' src='{{cell.url}}'></image> 
+          </view>
+        </navigator>  
+      </view> 
+      <view class='info bottom' wx:elif="{{item.thumbArr.length > 2}}">
+        <navigator url="../Thearticle/Thearticle?id={{item.id}}" open-type="navigate"> 
+          <view class='info text'>{{item.title}}</view> 
+          <view wx:for='{{item.thumbArr}}' wx:for-item="cell" wx:for-index="cellindex" wx:key='{{item.id}}'>  
+            <view class="upload_Item"> 
+              <image class="upload_Item_img" src='{{cell.url}}'></image> 
+            </view>
+          </view>
+          <view class='times'>
+            <view>{{item.uperName}}</view>
+            <view>{{item.pubTime}}</view>
+          </view>
+        </navigator>
+      </view>
+      <block wx:for='{{timees}}' wx:key='{{item.id}}'>
+        <view>{{item.timeess}}</view>
+      </block>
+    </view>
+  </block>
+  
+  <view class='data-loading' hidden='{{hidden}}'>  
+  </view>  
+</view> 
+
+<view class=" zhezhao view_hide{{showView?'view_show':''}}">
+  </view>
+
+<view class="b1 view_hide{{showView?'view_show':''}}">
+  <view class="t_w" wx:if="{{isLogin == true}}"> 
+    <image src="../../images/notopen.png" ></image>
+    <view class='occlude'>
+    <view>
+      <image bindtap="onChangeShowState1" src='../../images/occlude.png'></image>
+    </view>
+    </view>
+    <view class='prompt'>恭喜获得一个新手红包</view>
+    <view wx:if="{{isLogin4 == true}}">
+      <view class='prompt accredit'>请先同意授权登录才可领取红包</view>
+    </view>
+    <view class='random'>
+      <view class='number'>1-200</view>
+      <view class='yuan'>元 随机现金</view>
+    </view>
+    <view wx:if="{{isLogin2 == true}}">
+      <view class='login_desc'>为了给您更好的服务请先登录</view>
+    </view>
+    <button class='main_btn' open-type="getUserInfo" bindgetuserinfo="ongetuserinfo">登录</button>
+    <view wx:if="{{isLogin2 == true}}">
+      <view class='main_btn motaikuang' bindtap="changeName"></view>
+    </view>
+  </view>
+  <view class="t_w"  wx:if="{{isLogin1 == true}}"> 
+    <image src="../../images/open.png" ></image>
+    <view class='occlude'>
+      <image bindtap="onChangeShowState" src='../../images/occlude.png'></image>
+    </view>
+    <view class='obtain'>恭喜获得</view>
+    <view class='prompt noob'>新手红包</view>
+    <view class='random income'>
+      <view class='number'>{{redBag}}</view>
+      <view class='yuan'>元</view>
+    </view>
+  </view> 
+</view>
+
+<view class="Rightred vi_hide{{showView1?'vi_show':''}}" bindtap="onshow">
+  <image src='../../images/floating.png'></image>
+</view>
+
+<view class="notclick click_hide{{showView2?'click_show':''}}" bindtap="onChangeshow">
+  <view>
+    <view class='symbols'>
+      <image src='../../images/symbols.png'></image>
+    </view>
+    <view class='Readcurrency'>有{{dailyTimes}}次阅读金币待领取</view>
+    <view class='question'>
+      <image src='../../images/question.png'></image>
+    </view>
+  </view>
+</view>
+
+<view class="notclick huise click2_hide{{showView3?'click2_show':''}}" bindtap="onChanges">
+    <view class='symbols'>
+      <image src='../../images/Greymoney.png'></image>
+    </view>
+    <view class='Readcurrency Greywords'>今日奖励已领完</view>
+    <view class='question'>
+      <image src='../../images/grayquestion.png'></image>
+    </view>
+</view>
+
+<view class="notclick huise click1_hide{{showView5?'click1_show':''}}" bindtap="onChang">
+    <view class='symbols'>
+      <image src='../../images/Greymoney.png'></image>
+    </view>
+    <view class='Readcurrency Greywords'>{{sec}}后阅读奖励恢复</view>
+</view>
+<view class="restore click1_hide{{showView5?'click1_show':''}}" bindtap="restore">立即恢复</view>
+<view class='heise' wx:if="{{quyaoqing}}"></view>
+<view class='invitation1' wx:if="{{quyaoqing}}">
+  <view class='occlude1' bindtap="occlude1"><image src='../../images/occlude1.png'></image></view>
+  <view class='newyonghua'>邀请1位新用户</view>
+  <view class='jiangli'>立即恢复阅读奖励</view>
+  <form bindsubmit="submit" report-submit='true'>
+    <button open-type="share"  form-type="submit" type="default" class='quqing'  open-type="share">去邀请</button>
+  </form>
+</view>
+
+<view class="sanjiaojuxing click_hide{{showView7?'click_show':''}}">
+  <view class='cssTest' wx:if="{{condition}}" >
+    <view class='books'>
+      <image src='../../images/reading.png'></image>
+    </view>
+    <view class='Scrollingarea'>
+      <view>
+        <view class='yuejinbi'>阅读金币</view>
+        <view class='meici'>每次<text>{{readAddGoldNum}}</text>金币</view>
+      </view>
+      <view class='progressarea'>
+        <view class='progress'><view class='jindu' style='width:{{bizhi}}%;'></view></view>
+        <view class='bizhi'><text>{{dailyTimes1}}</text>/{{dailyMaxTimes}}</view>
+      </view>
+      <view class='shuoming'>点击任意文章，认真阅读全文即可获得阅读奖励，今日阅读奖励还有{{dailyTimes}}次</view>
+    </view>
+  </view>
+</view>
+
+<view class="sanjiaojuxing click3_hide{{showView4?'click3_show':''}}">
+  <view class='cssTest' wx:if="{{condition1}}" >
+    <view class='books'>
+      <image src='../../images/reading.png'></image>
+    </view>
+    <view class='Scrollingarea'>
+      <view>
+        <view class='yuejinbi'>阅读金币</view>
+        <view class='meici'>每次<text>{{readAddGoldNum}}</text>金币</view>
+      </view>
+      <view class='progressarea'>
+        <image class='biaozhong' src='../../images/watches.png'></image>
+        <view class='daojishi'>{{sec}}后恢复</view>
+      </view>
+      <view class='shuoming'>连续过快阅读可能导致奖励暂停，在提示时间后继续阅读，可领取本日剩余{{dailyTimes}}次奖励</view>
+    </view>
+  </view>
+</view>
+
+<view class="sanjiaojuxing click6_hide{{showView6?'click6_show':''}}">
+  <view id="cssTest1"  wx:if="{{condition2}}">
+    <view class='books'>
+      <image src='../../images/reading.png'></image>
+    </view>
+    <view class='wancheng'>今日奖励已领完，请明天再来</view>
+  </view>
+</view>
+<view   wx:if="{{articles.length == n}}">
+<ad unit-id="3333"></ad>
+</view>

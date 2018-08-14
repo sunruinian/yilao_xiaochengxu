@@ -1,0 +1,51 @@
+<view class='balance'>
+  <view class='yu_e'>
+    <image class='Theyuan' src='../../images/balance.png'></image>
+    <view  class='deposit'>余额：<text>{{credit}}</text>元</view>
+    <navigator url="../record/record?openId={{openId}}&&userId={{userId}}&&credit={{credit}}" open-type="navigate"> 
+      <view class='sanjiao'><image src='../../images/leavefor.png'></image></view>
+      <view class='shiyuan'>我的订单</view>
+    </navigator>
+  </view>
+  <view class='WeChat'>提现到微信</view>
+  <view class="xianqian">
+    <view class="{{selected?'lanse':'yuankuai'}}" bindtap="selected">
+      <view>{{articles[0].price}}元</view>
+      <view>售价{{articles[0].price}}元</view>
+    </view>
+    <view class="{{selected1?'lanse':'yuankuai'}}" bindtap="selected1">
+      <view>{{articles[1].price}}元</view>
+      <view>售价{{articles[1].price}}元</view>
+    </view>
+    <view class="{{selected2?'lanse':'yuankuai'}}" bindtap="selected2">
+      <view>{{articles[2].price}}元</view>
+      <view>售价{{articles[2].price}}元</view>
+    </view>
+  </view>
+  <view class='chongzhi'>
+    <view class="{{selected?'show':'hidden'}}">¥{{articles[0].price}}</view>
+    <view class="{{selected1?'show':'hidden'}}">¥{{articles[1].price}}</view>
+    <view class="{{selected2?'show':'hidden'}}">¥{{articles[2].price}}</view>
+    <view class='deficiency liji' wx:if="{{buzu == true}}">余额不足</view>
+    <view class='deficiency' bindtap="deficiency" wx:if="{{liji == true}}">立即兑现</view>
+  </view>
+  <view class='succeed' wx:if="{{isLogin2 == true}}"></view>
+  <view class='fuceng' wx:if="{{isLogin == true}}">
+    <view>兑现成功</view>
+    <navigator url="../record/record?openId={{openId}}&&userId={{userId}}&&credit={{credit}}" open-type="navigate"> 
+      <view bindtap="ascertain">确定</view>
+    </navigator>
+  </view>
+  <view class='fuceng' wx:if="{{isLogin1 == true}}">
+    <view>下单失败，该商品库存不足</view>
+      <view bindtap="ascertain1">确定</view>
+  </view>
+
+
+  <view class='know'>兑换须知：</view>
+    <view class='state'>1、到账时间：提交订单后，2-3个工作日内完成审核，并大款到你的微信钱包。</view>
+    <view class='state'>2、为保证提现成功，兑换前请确保微信号已实名认证，请确保兑换时填写的姓名、身份证号和微信姓名是同一个人。</view>
+  <button open-type="contact" class='contact_btn'>
+      <text>联系客服</text>
+  </button>
+</view>

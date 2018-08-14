@@ -1,0 +1,45 @@
+<view class = 'mypage'>
+  <block wx:for='{{articles}}' wx:key='{{item.id}}'>
+    <view class='audit'>
+      <text class='time'>{{item.time}}</text>
+      <view wx:if="{{item.status == 1 || item.status == 2 || item.status == 14 || item.status == 16 || item.status == 15}}">
+        <text class='state'>审核中</text>
+      </view>
+      <view wx:if="{{item.status == 3 || item.status == 4}}">
+        <text class='state'>处理中</text>
+      </view>
+      <view wx:if="{{item.status == 5}}">
+        <text class='state'>已发货</text>
+      </view>
+      <view wx:if="{{item.status == 7}}">
+        <text class='state'>中奖</text>
+      </view>
+      <view wx:if="{{item.status == 8}}">
+        <text class='state'>未中奖</text>
+      </view>
+      <view wx:if="{{item.status == 13 || item.status == 12}}">
+        <text class='state'>处理失败</text>
+      </view>
+      <view wx:if="{{item.status == 10}}">
+        <text class='state yanse'>处理成功</text>
+      </view>
+      <view wx:if="{{item.status == 11 || item.status == 18 }}">
+        <text class='state'>审核未通过</text>
+      </view>
+      <view wx:if="{{item.status == 17 }}">
+        <text class='state'>申诉中</text>
+      </view>
+    </view>
+    <view class='details'>
+      <view class='pic'><image src='{{item.image}}'></image></view>
+      <view class='center'>
+        <view>{{item.price}}元微信提现</view>
+        <view>￥{{item.price}}.00</view>
+      </view>
+    </view>
+  </block>
+  <view class='tupian' wx:if="{{articles == ''}}">
+    <view><image src='../../images/wu.png'></image></view>
+    <view>你还没有下过订单哦~</view>
+  </view>
+</view>

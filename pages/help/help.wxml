@@ -1,0 +1,25 @@
+<view class = 'help'>
+  <view class='play'>
+    <view class='why'>健康知识汇怎么玩？</view>
+    <view bindtap="unfold" wx:if="{{unfold == true}}"><image src='../../images/unfold.png'></image></view>
+    <view bindtap="Packup" wx:if="{{Packup == true}}"><image src='../../images/Packup.png'></image></view>
+    <view class='answer' wx:if="{{isLogin == true}}">健康知识汇是一款阅读养生健康知识就能赚钱的小程序。您可以通过阅读新闻赚取金币，金币可以兑换成零钱，提现到微信钱包。
+    </view>
+    <view class='line'></view>
+    <view class='why'>金币是什么？</view>
+    <view bindtap="unfold1" wx:if="{{unfold1 == true}}"><image src='../../images/unfold.png'></image></view>
+    <view bindtap="Packup1" wx:if="{{Packup1 == true}}"><image src='../../images/Packup.png'></image></view>
+    <view class='answer' wx:if="{{isLogin1 == true}}">金币是健康知识汇里面的货币，20金币=0.01元
+当天获得的金币，次日凌晨会自动转换成零钱，存入您的账户。
+    </view>
+    <view class='line'></view>
+    <view class='why'>零钱如何提现？</view>
+    <view bindtap="unfold2" wx:if="{{unfold2 == true}}"><image src='../../images/unfold.png'></image></view>
+    <view bindtap="Packup2" wx:if="{{Packup2 == true}}"><image src='../../images/Packup.png'></image></view>
+    <view class='answer' wx:if="{{isLogin2 == true}}">在“我的”页面点击“兑换提现”，可以进入提现页面，选择金额，点击“立即兑换”即可将余额提现到微信钱包
+    </view>
+  </view>
+  <button open-type="contact" class='contact_btn'>
+      <text>找不到问题，点此联系人工客服</text>
+  </button>
+</view>

@@ -1,0 +1,32 @@
+<import src="../../wxParse/wxParse.wxml"/>
+<view class='pages'>
+  <view class='headline'>{{articles[0].title}}</view>
+  <ad style = "margin-bottom:10px;" unit-id="adunit-205147c7ef3afbed"></ad>
+  <view class='author'>{{articles[0].uperName}}</view>
+  <view class='time'>{{unixTimestamp}}</view>
+  <view class="container1">
+    <!-- 这一块是富文本 显示的内容区 -->
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+  </view>
+  <ad unit-id="adunit-4963509be1951537"></ad>
+  <view class='kongbai'></view>
+</view>
+<view class='yincang xianshi' wx:if="{{isLogin == true}}">
+  <image src='../../images/symbols.png'></image>
+  <view>阅读文章+{{gold}}金币</view>
+</view>
+<image wx:if="{{isAuthorized == 0 || isRookie == 0}}" class='paopao' src='../../images/bubbles.png'></image>
+<view class='returnto'>
+  <view class='homepage' bindtap="homepage">
+    <image wx:if="{{isAuthorized == 0 || isRookie == 0}}" src='../../images/Inred.png'></image>
+    回到首页
+  </view>
+  <view class='fenshare'>
+    <form bindsubmit="submit" report-submit='true'>
+      <button  open-type="share"  form-type="submit" type="default" style='background-color:#4ABD49; bottom:0px; outline:none;border:none;list-style: none; line-height:48px; color:#ffffff;'>
+        <image src='../../images/WeChat.png'></image>
+        分享给朋友
+      </button>
+    </form>
+  </view>
+</view>

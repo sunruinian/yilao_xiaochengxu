@@ -1,0 +1,16 @@
+.mypage{width: 100%;height: 100%; border-top: 1px solid #eeeeee;}
+.audit{width: 91%; height: 40px; padding: 5px 15px 0 15px; line-height: 40px;}
+.time{width: 50%; float: left;font-size: 12px;color: #999999; text-align: left;}
+.state{width: 50%; float: right;font-size: 14px;color: #FE9526; text-align: right;}
+.yanse{color: #68CB14;}
+.details{width: 100%;height: 100px; border-bottom:1px solid #eeeeee;}
+.pic{width: 102px; height: 100%; float: left; margin-left: 15px;}
+.pic image{width: 100%; height: 75px; background-color: #68CB14; margin-top: 12px;}
+.center{width: 30%;height: 100%; float: left;}
+.center view{width: 100%;margin-top: 8px;font-size: 16px;color: #000000;text-align: justify; margin-left: 10px;}
+.center view:last-child{font-size: 20px;color: #FF5645;margin-top: 34px;}
+.right{float: right; width: 30%; height: 100%;}
+.right view{ font-size: 14px;color: #999999; margin-top: 70px;}
+.right view image{width: 7px; height: 12px; display: inline-block; margin-top: 5px; vertical-align: top; margin-left: 5px; }
+.tupian image{width:287px; height: 152px; margin-top: 100px;font-size: 16px;color: #323232;}
+.tupian view{font-size: 16px;color: #323232;}

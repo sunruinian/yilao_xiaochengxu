@@ -1,0 +1,47 @@
+
+<view class='mypage'>
+  <view class='touxiang beijingse'>
+    <image src='{{avatarUrl}}'></image>
+    <button class='main_btn' open-type="getUserInfo" bindgetuserinfo="ongetuserinfo">登录</button>
+  </view>
+  <view class='name beijingse'>{{nickname}}</view>
+  <view class='shouyiqu beijingse'>
+    <view class='fiex'>
+      <view>我的金币</view>
+      <view class='jiaqian'>{{gold}}<text>枚</text></view>
+    </view>
+    <view class='fiex'>
+      <view>现金余额</view>
+      <view class='jiaqian'>{{credit}}<text>元</text></view>
+    </view>
+    <view class='fiex'>
+      <view>总收入</view>
+      <view class='jiaqian'>{{income}}<text>元</text></view>
+    </view>
+  </view>
+  <view class='touwen'>金币每天凌晨自动兑现成现金，当前汇率20金币=0.01元</view>
+  <button class='button'  open-type="getUserInfo" bindgetuserinfo="ongetuserinfo1"> 
+    <view class='cash xiahuaxian'>
+      <view class='withdrawal'><image src='../../images/withdrawal.png'></image></view>
+      <view  class='deposit'>余额提现</view>
+      <view class='sanjiao'><image src='../../images/leavefor.png'></image></view>
+    </view>
+  </button>
+
+  
+  <button class='button'  open-type="getUserInfo" bindgetuserinfo="ongetuserinfo2">
+    <view class='cash xiahuaxian'>
+      <view class='withdrawal'><image src='../../images/order.png'></image></view>
+      <view  class='deposit'>我的订单</view>
+      <view class='sanjiao'><image src='../../images/leavefor.png'></image></view>
+    </view>
+  </button>
+  <!--</navigator>-->
+  <navigator url="../help/help" open-type="navigate">  
+    <view class='cash' bindtap="cashing">
+      <view class='withdrawal'><image src='../../images/service.png'></image></view>
+      <view  class='deposit'>客服帮助</view>
+      <view class='sanjiao xia'><image src='../../images/leavefor.png'></image></view>
+    </view>
+  </navigator>
+</view>

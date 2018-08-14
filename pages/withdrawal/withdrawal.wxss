@@ -1,0 +1,35 @@
+.balance{width: 100%;height: 100%;}
+.yu_e{width: 100%;height: 53px;border-top: 1px solid #eeeeee;}
+.Theyuan{width: 17px;height: 17px;float: left;margin-top: 18px; margin-left: 15px;}
+.deposit{font-size: 16px;color: #323232;float: left;margin-left: 15px;line-height: 32px;margin-top: 10px;}
+.shiyuan{font-size: 16px;color: #323232;float: right;line-height: 32px; margin-top: 10px; margin-right: 8px;}
+.sanjiao{width: 9px;height: 16px;float: right; margin-right: 20px;margin-top: 12px;}
+.sanjiao image{width: 5px;height: 10px;}
+.xiahuaxian{border-bottom: 1px solid #e5e5e5;}
+.deposit text{color: #FF743A;}
+.WeChat{ width: 100%;height: 25px; line-height: 25px; margin-top: 20px;font-size: 18px;color: #323232; text-align: left; 
+margin-left: 15px;font-weight: 600;font-family: PingFangSC-Medium; }
+.xianqian{ margin: 15px; margin-left: 10px;}
+.yuankuai{width:31%; margin-left: 5px; float: left;font-size: 16px; height: 65px; background: #FAFAFA;border: 1px solid #eeeeee;border-radius: 4px;}
+.yuankuai view:first-child{font-size: 16px;color: #323232; line-height: 25px;margin-top: 10px;}
+.yuankuai view:last-child{font-size: 12px;color: #8E8E8E;}
+.lanse{width:31.3%; margin-left: 5px; color: #ffffff; float: left; height: 65px; background: #1CAC1B ;border: 1px solid #1CAC1B ;border-radius: 4px;}
+.lanse view:first-child{font-size: 16px;color: #ffffff; line-height: 25px;margin-top: 10px;}
+.lanse view:last-child{font-size: 12px;color: #ffffff;}
+.show{display:block;}
+.hidden{display:none;}
+.chongzhi{width: 91%; padding: 15px; padding-left: 17px; float: left; margin-top: 20px; border-bottom: 1px solid #eeeeee;}
+.chongzhi view{float: left;font-size: 24px;color: #FF743A;}
+.chongzhi .deficiency{width: 80px; height: 30px; font-size: 14px; color: #FFFFFF; background-color:#1CAC1B; line-height: 30px;border-radius: 15px; float: right;}
+.chongzhi .liji{background: #C7C7C7;}
+.know{width: 91%; padding: 15px; padding-top: 18px; padding-bottom: 5px; float: left; text-align: left;font-size: 14px;color: #323232;}
+.state{width: 91%; padding: 3px; float: left;font-size: 13px;color: #8E8E8E;text-align: left; padding-left: 15px; line-height: 24px;}
+.contact_btn{position: absolute; bottom: 15px;left: 50%;font-size: 14px;color: #8E8E8E; width: 85px; height: 30px; line-height: 30px;margin-left: -42px;background:transparent; outline: none; border: none; background-color: none ;text-decoration:underline;
+}
+button::after{border:none;}
+.succeed{width: 100%; height: 100%; background-color: #666666; opacity: 0.8; position: fixed;z-index: 10;left: 0;top: 0;}
+.fuceng{width: 270px; height: 116px; position: fixed;z-index: 20; top: 50%; left: 50%;margin-top: -58px; margin-left: -135px; background-color: #ffffff; border-radius: 12px;}
+.fuceng view:first-child{width: 100%; height: 76px; border-bottom: 1px solid #eeeeee; line-height: 76px;font-size: 17px;
+color: #030303;}
+.fuceng view:last-child{line-height: 38px;font-size: 17px;color: #1CAC1B; height: 38px;}
+.fuceng navigator{height: 0; width: 60%; margin-left: 20%;}

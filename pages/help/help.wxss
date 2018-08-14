@@ -1,0 +1,59 @@
+.help{
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid #eeeeee;
+}
+.play{
+  width: 100%;
+  margin-top: 10px;
+}
+.play .why{
+  width: 50%;
+  font-size: 16px;
+  color: #323232;
+  height: 16px;
+  padding-top: 16px;
+  float: left;
+  text-align: left;
+  padding-left: 14px;
+  padding-bottom: 10px;
+}
+.play view {
+  width: 40%;
+  float: right;
+}
+.play .line{
+  width: 100%;
+  float: left;
+  border-bottom: 1px solid #eeeeee;
+  margin-top: 10px;
+}
+.play view image{
+  width: 17px;
+  height: 10px;
+  float: right;
+  margin-right: 15px;
+  margin-top: 19px;
+}
+.play .answer{
+  width: 90%;
+  font-size: 14px;
+  color: #8E8E8E;
+  float: left;
+  line-height: 20px;
+  padding: 0 15px 0px 15px;
+  text-align: left;
+}
+.contact_btn{
+  width: 85%;
+  height: 54px;
+  line-height: 54px;
+  font-size: 18px;
+  color: #1CAC1B;
+  border-radius: 27px;
+  border: 1px solid #1CAC1B;
+  margin-top: 60px;
+  float: left;
+  margin-left: 7.5%;
+  font-weight: 500;
+}
